@@ -1,0 +1,96 @@
+html, body{
+   width:100%;
+   height:100%;
+   /*background-color:#fff;*/
+ font-family: 'Sansita', sans-serif;
+ background-image: url('../img/todo-background-4.png');
+ background-repeat: repeat;
+ background-size: 5%;
+ background-color:rgba(214,211,228,.75);
+ /*font-family: 'Dancing Script', cursive;*/
+}
+
+/*input container styles*/
+.input-container{
+  height:20%;
+  /*background-color:red;*/
+  border: 1px solid black;
+}
+
+.input-row{
+  height:100%;
+}
+
+.input-contents{
+  height:100%;
+  /*background-color: white;*/
+}
+.flex-site-container-input{
+  height:100%;
+  /*background: blue;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-input-row{
+  height: 100%;
+  width: 100%;
+}
+.title{
+  height:70%;
+  /*background-color: purple;*/
+}
+.text-boxes{
+  height:30%;
+  /*background-color: yellow;*/
+}
+.input-textbox{
+  width: 55%;
+  border: none;
+  border-radius:1px;
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+}
+/*input container styles*/
+
+/*title and button styles*/
+
+.title h1{
+  font-family: 'Satisfy', cursive;
+  font-size: 4em;
+}
+
+.todo-button{
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+  border-radius: 1px;
+  border:none;
+  border: 1 solid white;
+  /*background-color: transparent;*/
+  color: white;
+}
+
+#input-date{
+  width:128px;
+  border-radius: 1px;
+  border:none;
+}
+/*title and button styles*/
+
+
+/*output container styles*/
+.output-container{
+  height:80%;
+  /*background:green;*/
+    border: 1px solid black;
+}
+.output-row{
+    height:100%;
+}
+.output-contents{
+  /*background-color: white;*/
+  height:80%;
+}
+.flex-site-container-output{
+  height: 100%;
+}
+
+/*output container styles*/
