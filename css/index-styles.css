@@ -40,14 +40,14 @@ header h1{
   width:40px;
   background-image: url('../img/pencil.png');
   background-position: center;
-  background-size: 29px;
+  background-size: 25px;
   background-repeat: no-repeat;
   height:30px;
   border:none;
   border-radius: 3px;
   color:transparent;
-  background-color: rgba(255, 255, 255, 0.50);
+  background-color: transparent;
   position:absolute;
   top:70px;
-  left:90.5%
+  left:82%
 }
