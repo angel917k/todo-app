@@ -10,14 +10,42 @@
 	<link rel="stylesheet" href="css/index-styles.css">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
-<body>
+<body style="background-color:rgba(100,211,228,.50);">
 
+<!-- start of header-->
 <header>
   <h1>Things To Do!</h1>
 </header>
+<!-- end of header -->
+
+<!-- start of user input -->
 <input class="center-block" type="text" placeholder="What do you need to do?" id="todo">
-<button  id="add-button">Write</button>
+<button  id="add-button"></button>
+<!-- end of user input -->
+
+<!-- start of list container -->
+<div class="center-block list">
+  <ul class="center-block" id="ul">
+
+    <!-- <li class="center-block todo-item">
+      <div class="completed-button"></div>
+      <div class="edit-button"></div>
+      <div class="delete-button"></div>
+      <p class="cross-out">this is my first list item.</p>
+    </li>
+    <li class="center-block todo-item">
+      <div class="completed-button"></div>
+      <div class="edit-button"></div>
+      <div class="delete-button"></div>
+      <p class="cross-out">this is my first list item.</p>
+    </li> -->
+
+
+  </ul>
+</div>
+
 <!--start of javascript	 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>

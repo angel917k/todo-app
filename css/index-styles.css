@@ -1,19 +1,22 @@
+/*start of body styles*/
 html, body{
   width:100%;
   height:100%;
-  font-family: 'Sansita', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
   background-image: url('../img/todo-background-4.png');
   background-repeat: repeat;
-  background-size: 7%;
+  background-size: 50px;
   background-color:rgba(214,211,228,.75);
   /*font-family: 'Dancing Script', cursive;*/
 }
+/*end of body styles*/
 
+/*start of header styles*/
 header{
-  height: 70px;
+  height: 75px;
   width:100%;
   margin-top: 0px;
-  padding-top: 5px;
+  /*padding-top: 2pxs;*/
   /*border: 1px blue solid;*/
 }
 
@@ -21,18 +24,21 @@ header h1{
   margin-top: 0px;
   width:100%;
   text-align: center;
-  font-family: 'Dancing Script', cursive;
+  /*font-family: 'Dancing Script', cursive;*/
   font-size: 45px;
   /*border: 1px green solid;*/
 }
+/*end of header styles*/
 
+/*start of user input styles*/
 #todo{
-  min-height:30px;
+  min-height:45px;
   padding-left: 5px;
-  width:80%;
+  width:90%;
   /*margin-left:  20%;*/
   border-radius:3px;
   border: none;
+  font-size: 18px;
   background-color: rgba(255, 255, 255, 0.50);
 }
 
@@ -40,14 +46,193 @@ header h1{
   width:40px;
   background-image: url('../img/pencil.png');
   background-position: center;
-  background-size: 25px;
+  background-size: 75%;
   background-repeat: no-repeat;
   height:30px;
   border:none;
   border-radius: 3px;
-  color:transparent;
+  color:red;
+  font-size: 25px;
   background-color: transparent;
   position:absolute;
-  top:70px;
+  top:84px;
+  left:82%;
+  transition: ease .25s ;
+}
+#add-button:hover{
+  transform:translateY(7px) rotate(45deg);
+  width:40px;
+  background-image: url('../img/pencil-hover.png');
+  background-position: center;
+  background-size: 30px;
+  background-repeat: no-repeat;
+  height:30px;
+  border:none;
+  border-radius: 3px;
+  color:red;
+  font-size: 25px;
+  background-color: transparent;
+  position:absolute;
+  top:75px;
   left:82%
 }
+
+/*end of user input styles*/
+
+
+/*start of list container styles*/
+.list{
+  margin-top: 15px;
+  padding-left: 0px;
+  width:95%;
+  border-top: .25px solid rgba(0,0,0,.98);
+}
+
+/*end of list container styles*/
+
+/*start of ul styles*/
+#ul{
+  width:98%;
+  padding-left: 0px;
+  padding-top: 5px;
+}
+/*end of ul styles*/
+
+/*start of li styles*/
+.todo-item{
+  list-style-type: none;
+  padding-top: 9px;
+  width:100%;
+  min-height:40px;
+  /*padding-top: 0px;*/
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 3px;
+}
+
+.todo-item-completed{
+  list-style-type: none;
+  padding-top: 9px;
+  width:100%;
+  min-height:40px;
+  /*padding-top: 0px;*/
+  margin-top: 10px;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 3px;
+}
+.todo-item-completed p {
+  text-decoration: line-through;
+}
+
+/*end of li styles*/
+
+/*start of list item button styles */
+.edit-button{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/pencil-list.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  margin-top: -5px;
+  margin-right:5px;
+  transition: ease .25s ;
+}
+.edit-button:hover{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/edit-list.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  margin-top: -5px;
+  margin-right:5px;
+  cursor: pointer;
+}
+.delete-button{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/delete.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  margin-top: -5px;
+  margin-right:5px;
+  border-right: 1px solid black;
+  transition: ease .25s ;
+}
+.delete-button:hover{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/delete-hover.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  margin-top: -5px;
+  margin-right:5px;
+  border-right: 1px solid black;
+  cursor: pointer;
+}
+.completed-button{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/done.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  background-color: transparent;
+  margin-top: -5px;
+  margin-right:5px;
+  transition: ease .25s ;
+}
+
+.completed-button:hover{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/done-hover.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  background-color: transparent;
+  margin-top: -5px;
+  margin-right:5px;
+  cursor: pointer;
+}
+
+.completed-button-done{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/done-hover.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  background-color: transparent;
+  margin-top: -5px;
+  margin-right:5px;
+  cursor: pointer;
+  transition: ease .25s ;
+}
+
+.completed-button-done:hover{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/done.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  background-color: transparent;
+  margin-top: -5px;
+  margin-right:5px;
+  cursor: pointer;
+}
+/*end of list item button styles */
