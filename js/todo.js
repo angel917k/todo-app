@@ -39,9 +39,15 @@ function addListItem (){
   editButton.classList.add('edit-button'); // adds edit button class to div
   editButton.addEventListener('click',function(e){
     var userEdit = prompt('What would you like to do instead?');
+    
+    if (userEdit != null){
     var parent = this.parentNode;
     var thisPTag = parent.childNodes[3];
     thisPTag.innerHTML = '&nbsp;' + userEdit
+  }else if (userEdit = null){
+
+  }
+
   }); // Edits current todo item
 
   var deleteButton = document.createElement('div'); //adds delete button div
@@ -68,4 +74,12 @@ function addListItem (){
 }
 
 var add = document.getElementById('add-button') // obtains add pencil button
-add.addEventListener('click', addListItem) // triggers functionality 
+add.addEventListener('click', addListItem) // triggers functionality
+
+var addUsingEnter = document.getElementById("todo")
+addUsingEnter.addEventListener("keyup", function(event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+      addListItem();
+  }
+}); // adds todo item using the enter key
