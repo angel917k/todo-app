@@ -84,7 +84,7 @@ function addListItem (){
 
   document.getElementById('todo').value = ''; //Resets userinput field
 
-}
+} // Entire function that adds to do item to ul
 
 var add = document.getElementById('add-button') // obtains add pencil button
 add.addEventListener('click', function (){
@@ -105,6 +105,10 @@ addUsingEnter.addEventListener("keyup", function(event) {
   }
 }); // adds todo item using the enter key, based on whether the user input has value
 //
+
+
+// Test code to deactivate hover on touch devices
+
 // var touchAdd = document.getElementById('add-button');
 // touchAdd.addEventListener('touchstart',function addTouchClass(e) {
 //   touchAdd.documentElement.classList.add('can-touch');
