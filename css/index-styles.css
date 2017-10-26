@@ -5,7 +5,7 @@ html, body{
   font-family: 'Gloria Hallelujah', cursive;
   background-image: url('../img/todo-background-4.png');
   background-repeat: repeat;
-  background-size: 50px;
+  background-size: 65px;
   background-color:rgba(214,211,228,.75);
   /*font-family: 'Dancing Script', cursive;*/
 }
@@ -33,14 +33,15 @@ header h1{
 /*start of user input styles*/
 #todo{
   min-height:45px;
-  padding-left: 5px;
-  padding-right: 50px;
-  width:90%;
+  padding-left: 10px;
+  padding-right: 70px;
+  width:99%;
   /*margin-left:  20%;*/
   border-radius:3px;
   border: none;
-  font-size: 18px;
+  font-size: 20px;
   background-color: rgba(255, 255, 255, 0.50);
+
 }
 
 #add-button{
@@ -57,8 +58,9 @@ header h1{
   background-color: transparent;
   position:absolute;
   top:84px;
-  left:82%;
+  right:2%;
   transition: ease .25s ;
+  outline: none;
 }
 #add-button:hover{
   transform:translateY(7px) rotate(45deg);
@@ -75,7 +77,8 @@ header h1{
   background-color: transparent;
   position:absolute;
   top:75px;
-  left:82%
+  right:2%;
+ outline: none;
 }
 
 /*end of user input styles*/
@@ -107,13 +110,14 @@ header h1{
   min-height:40px;
   /*padding-top: 0px;*/
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 3px;
 }
 
 .todo-item p {
   margin-top: -5px;
+  font-size: 20px;
 }
 
 .todo-item-completed{
@@ -123,13 +127,45 @@ header h1{
   min-height:40px;
   /*padding-top: 0px;*/
   margin-top: 10px;
-  font-size: 18px;
+  font-size: 20px;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 3px;
 }
 .todo-item-completed p {
   margin-top: -5px;
-  text-decoration: line-through;
+  /*text-decoration: line-through;*/
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.todo-item-completed .strikethrough {
+	display: inline-block;
+	position: relative;
+	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.todo-item-completed .strikethrough:after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	margin-top: -0.7em;
+	background: black;
+	transform-origin: center left;
+	animation: strikethrough 1s  cubic-bezier(.55, 0, .1, 1) 1;
+	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+/* Keyframes for initial animation */
+
+@keyframes strikethrough {
+	from {
+		transform: scaleX(0);
+	}
+	to {
+		transform: scaleX(1);
+	}
 }
 
 /*end of li styles*/
@@ -185,6 +221,18 @@ header h1{
   border-right: 1px solid black;
   cursor: pointer;
 }
+.delete-button:active{
+  height:32px;
+  width: 40px;
+  background-image: url('../img/delete.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  float:left;
+  margin-top: -5px;
+  margin-right:5px;
+  border-right: 1px solid black;
+}
 .completed-button{
   height:32px;
   width: 40px;
@@ -198,6 +246,7 @@ header h1{
   margin-right:5px;
   transition: ease .25s ;
 }
+
 
 .completed-button:hover{
   height:32px;

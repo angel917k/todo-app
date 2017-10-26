@@ -7,7 +7,8 @@ function addListItem (){
     todoItem.classList.add('center-block');
 
   var userInput = document.getElementById('todo').value; //value for user input
-  var pTag = document.createElement('p'); //Creates p tag to hold user input
+  var pTag = document.createElement('p');
+  pTag.classList.add('strikethrough') ;//Creates p tag to hold user input
   pTag.innerHTML = '&nbsp;' + userInput; //places user input inside of p tag
 
   var completeButton = document.createElement('div'); // creates complete button div
@@ -35,11 +36,34 @@ function addListItem (){
 
   }); // crosses out user input and removes edit button when clickes. removes crossout and adds edit button
 
+  completeButton.addEventListener('touchstart',function(e){
+    currentClass=this.classList;
+
+    if(currentClass.value==="completed-button"){
+      var parent = this.parentNode;
+      this.classList.remove('completed-button');
+      this.classList.add('completed-button-done');
+      parent.classList.remove('todo-item');
+      parent.classList.add('todo-item-completed');
+      parent.removeChild(parent.childNodes[1]);
+    } else {
+      this.classList.remove('completed-button-done');
+      this.classList.add('completed-button');
+      var parent = this.parentNode;
+      parent.classList.remove('todo-item-completed');
+      parent.classList.add('todo-item');
+      var reappendEdit = document.createElement('div');
+      reappendEdit.classList.add('edit-button');
+      parent.insertBefore(reappendEdit,parent.childNodes[1]);
+    }
+
+  }); // crosses out user input and removes edit button when clickes. removes crossout and adds edit button
+
   var editButton = document.createElement('div'); // creates edit button div
   editButton.classList.add('edit-button'); // adds edit button class to div
   editButton.addEventListener('click',function(e){
     var userEdit = prompt('What would you like to do instead?');
-    
+
     if (userEdit != null){
     var parent = this.parentNode;
     var thisPTag = parent.childNodes[3];
@@ -74,12 +98,20 @@ function addListItem (){
 }
 
 var add = document.getElementById('add-button') // obtains add pencil button
-add.addEventListener('click', addListItem) // triggers functionality
+add.addEventListener('click', function (){
+  var userInput = document.getElementById('todo').value;
+  if (userInput){
+    addListItem();
+  }
+}); // triggers functionality based on whether or not the user input has value
 
 var addUsingEnter = document.getElementById("todo")
 addUsingEnter.addEventListener("keyup", function(event) {
   event.preventDefault();
-  if (event.keyCode === 13) {
-      addListItem();
+  var userInput = document.getElementById('todo').value;
+  if (userInput){
+    if (event.keyCode === 13) {
+        addListItem();
+    }
   }
-}); // adds todo item using the enter key
+}); // adds todo item using the enter key, based on whether the user input has value
