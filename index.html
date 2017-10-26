@@ -10,47 +10,29 @@
 	<link rel="stylesheet" href="css/index-styles.css">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 </head>
-<body>
-<div class="container-fluid input-container">
-  <div class="row input-row">
-    <div class="col-sm-10 col-sm-offset-1 input-contents">
-      <div class="flex-site-container-input">
-        <div class="row content-input-row">
-          <div class="flex-site-container-input">
-            <div class="col-sm-12 title">
-              <h1 class="text-center">Things To Do!</h1>
-            </div>
-          </div>
-          <!-- <div class="flex-site-container-input"> -->
-            <div class="col-sm-12 text-boxes">
-              <form class="text-center" onsubmit="submitForm()" name="input" method="post">
-                <input class="input-textbox" type="text" name="todo-input">
-                <!-- <label for="meeting">Meeting Date : </label> -->
-                <input id="input-date" type="date" value="2017-10-18"/>
-                <input class="todo-button" type="submit" value="Todo!">
-              </form>
-            </div>
-          <!-- </div> -->
-        </div>
-      </div>
-    </div>
-  </div>
+<body style="background-color:rgba(100,211,228,.50);">
+
+<!-- start of header-->
+<header>
+  <h1>Things To Do!</h1>
+</header>
+<!-- end of header -->
+
+<!-- start of user input -->
+<input class="center-block" type="text" placeholder="What do you need to do?" id="todo">
+<button  id="add-button"></button>
+<!-- end of user input -->
+
+<!-- start of list container -->
+<div class="center-block list">
+  <ul class="center-block" id="ul">
+
+
+  </ul>
 </div>
-
-<div class="container-fluid output-container">
-  <div class="row output-row">
-    <div class="col-sm-10 col-sm-offset-1 output-contents">
-      <div class="flex-site-container-output">
-        <ul>
-
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+<!-- end of list container  -->
 <!--start of javascript	 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
