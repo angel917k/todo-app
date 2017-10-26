@@ -41,7 +41,7 @@ header h1{
   border: none;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.50);
-
+  
 }
 
 #add-button{
@@ -142,6 +142,7 @@ header h1{
 	display: inline-block;
 	position: relative;
 	transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+    margin-bottom: 7px;
 }
 
 .todo-item-completed .strikethrough:after {
@@ -155,6 +156,7 @@ header h1{
 	transform-origin: center left;
 	animation: strikethrough 1s  cubic-bezier(.55, 0, .1, 1) 1;
 	transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+    margin-bottom: 7px;
 }
 
 /* Keyframes for initial animation */

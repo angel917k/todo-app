@@ -29,31 +29,20 @@ function addListItem (){
       var parent = this.parentNode;
       parent.classList.remove('todo-item-completed');
       parent.classList.add('todo-item');
+
       var reappendEdit = document.createElement('div');
       reappendEdit.classList.add('edit-button');
-      parent.insertBefore(reappendEdit,parent.childNodes[1]);
-    }
+      reappendEdit.addEventListener('click', function(e){
+        var reappendEditUserEdit = prompt('What would you like to do instead?');
 
-  }); // crosses out user input and removes edit button when clickes. removes crossout and adds edit button
+        if (reappendEditUserEdit != null){
+        var parent = this.parentNode;
+        var thisPTag = parent.childNodes[3];
+        thisPTag.innerHTML = '&nbsp;' + reappendEditUserEdit;
+      }else if (reappendEditUserEdit = null){
 
-  completeButton.addEventListener('touchstart',function(e){
-    currentClass=this.classList;
-
-    if(currentClass.value==="completed-button"){
-      var parent = this.parentNode;
-      this.classList.remove('completed-button');
-      this.classList.add('completed-button-done');
-      parent.classList.remove('todo-item');
-      parent.classList.add('todo-item-completed');
-      parent.removeChild(parent.childNodes[1]);
-    } else {
-      this.classList.remove('completed-button-done');
-      this.classList.add('completed-button');
-      var parent = this.parentNode;
-      parent.classList.remove('todo-item-completed');
-      parent.classList.add('todo-item');
-      var reappendEdit = document.createElement('div');
-      reappendEdit.classList.add('edit-button');
+      }
+      })
       parent.insertBefore(reappendEdit,parent.childNodes[1]);
     }
 
@@ -61,7 +50,7 @@ function addListItem (){
 
   var editButton = document.createElement('div'); // creates edit button div
   editButton.classList.add('edit-button'); // adds edit button class to div
-  editButton.addEventListener('click',function(e){
+  editButton.addEventListener('click', function(e){
     var userEdit = prompt('What would you like to do instead?');
 
     if (userEdit != null){
@@ -115,3 +104,9 @@ addUsingEnter.addEventListener("keyup", function(event) {
     }
   }
 }); // adds todo item using the enter key, based on whether the user input has value
+//
+// var touchAdd = document.getElementById('add-button');
+// touchAdd.addEventListener('touchstart',function addTouchClass(e) {
+//   touchAdd.documentElement.classList.add('can-touch');
+//   touchAdd.removeEventListener('touchstart', addtouchclass, false)
+// },false);
