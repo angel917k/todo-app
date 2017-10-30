@@ -1,4 +1,5 @@
 function addListItem (){
+  //Great job commenting your code! You're one of the few.
 
   var ul = document.getElementById('ul'); //grab ul to use for appending userinputs
 
@@ -29,7 +30,7 @@ function addListItem (){
       var parent = this.parentNode;
       parent.classList.remove('todo-item-completed');
       parent.classList.add('todo-item');
-
+//Nice use of the if else to create your own program logic!
       var reappendEdit = document.createElement('div');
       reappendEdit.classList.add('edit-button');
       reappendEdit.addEventListener('click', function(e){
@@ -55,10 +56,10 @@ function addListItem (){
 
     if (userEdit != null){
     var parent = this.parentNode;
-    var thisPTag = parent.childNodes[3];
-    thisPTag.innerHTML = '&nbsp;' + userEdit
-  }else if (userEdit = null){
-
+    var thisPTag = parent.childNodes[3]; //Is there any way you can make this more dynamic rather than using index 3 every time?
+    thisPTag.innerHTML = '&nbsp;' + userEdit //Nice use of unicode!
+  } else if (userEdit = null){ 
+//What happens here?
   }
 
   }); // Edits current todo item
@@ -83,9 +84,9 @@ function addListItem (){
   ul.appendChild(todoItem); // adds entire li to ul
 
   document.getElementById('todo').value = ''; //Resets userinput field
-
+  //Good cleanup/edge casing ^^^
 } // Entire function that adds to do item to ul
-
+//Forgot your ; ^^
 var add = document.getElementById('add-button') // obtains add pencil button
 add.addEventListener('click', function (){
   var userInput = document.getElementById('todo').value;
@@ -94,7 +95,7 @@ add.addEventListener('click', function (){
   }
 }); // triggers functionality based on whether or not the user input has value
 
-var addUsingEnter = document.getElementById("todo")
+var addUsingEnter = document.getElementById("todo") //well done! You're one of 3 that figured this out!
 addUsingEnter.addEventListener("keyup", function(event) {
   event.preventDefault();
   var userInput = document.getElementById('todo').value;
